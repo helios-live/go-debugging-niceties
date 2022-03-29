@@ -1,4 +1,4 @@
-module github.com/ideatocode/go-debugging-niceties
+module go.ideatocode.tech/debug
 
 go 1.17
 

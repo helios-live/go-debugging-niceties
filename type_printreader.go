@@ -1,4 +1,4 @@
-package debugging
+package debug // import go.ideatocode.tech/debug
 
 import (
 	"io"

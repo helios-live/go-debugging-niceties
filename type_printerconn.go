@@ -25,7 +25,7 @@ func (pc PrinterConn) Read(b []byte) (int, error) {
 	old := log.Writer()
 	log.Print(
 		"\n============================================================================\n",
-		"Read: ", pc.Prefix, ", Addr: ", pc.RemoteAddr().String(), ", Len: ", n, ", Err: ", err, "\n",
+		"Read: ", pc.Prefix, ", Addr: ", pc.RemoteAddr().String(), ", Len: ", n, " / ", len(b), ", Err: ", err, "\n",
 		spew.Sdump(
 			b[0:n],
 		),
@@ -44,7 +44,7 @@ func (pc PrinterConn) Write(b []byte) (int, error) {
 	old := log.Writer()
 	log.Print(
 		"\n============================================================================\n",
-		"Write: ", pc.Prefix, ", Addr: ", pc.RemoteAddr().String(), ", Len: ", n, ", Err: ", err, "\n",
+		"Write: ", pc.Prefix, ", Addr: ", pc.RemoteAddr().String(), ", Len: ", n, " / ", len(b), ", Err: ", err, "\n",
 		spew.Sdump(
 			b[0:],
 		),

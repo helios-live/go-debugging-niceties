@@ -1,4 +1,4 @@
-module go.ideatocode.tech/debug
+module github.com/helios-live/go-debugging-niceties/v2
 
 go 1.17
 
